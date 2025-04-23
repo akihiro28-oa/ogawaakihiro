@@ -6,12 +6,27 @@
   <title>Kokokan Design</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'uld2fcn',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
 </head>
 <body>
   <header class="hero">
     <div class="hero-inner">
-      <img src="logo.png" alt="Kokokan Design ロゴ" class="logo">
-      <h1>あなたの想いを形にして、広めるお手伝い</h1>
+      <span class="leftline"></span>
+      <span class="rightline"></span>
+      <img src="./images/TOPhaikei-80.jpg" class="haikei">
+      <div>
+      <img src="./images/rogo.svg" alt="Kokokan Design ロゴ" class="logo">
+      <p>あなたの想いを形にして、広めるお手伝い</p>
+    </div>
     </div>
     <nav class="menu-icon">
       <div></div>
@@ -21,6 +36,8 @@
   </header>
 
   <section class="intro">
+     <span class="leftline naivey"></span>
+     <span class="rightline naivey"></span>
     <p>
       Kokokanとは「心」と「繋がる」を組み合わせたもの。<br>
       相手の気持ち、考え、想いという「心」の部分を、深掘りし、<br>
@@ -34,19 +51,21 @@
 
   <section class="works">
     <h2>WORKS</h2>
+     <span class="leftline1"></span>
+     <span class="rightline1"></span>
     <div class="work-gallery">
       <div class="work-item">
-        <img src="work1.jpg" alt="WORK 1">
+        <img src="images/SVG/Banner01-80.jpg" alt="WORK 1">
       </div>
       <div class="work-item">
-        <img src="work2.jpg" alt="WORK 2">
+        <img src="images/cafePC.png" alt="WORK 2">
         <p>01 Banner<br><span>スマホプラン宣伝バナー（架空）</span></p>
       </div>
       <div class="work-item">
-        <img src="work3.jpg" alt="WORK 3">
+        <img src="images/biyouinnPC.png" alt="WORK 3">
       </div>
     </div>
-    <a href="#allworks" class="all-view">ALL VIEW →</a>
+    <a href="#allworks" class="all-view">ALL VIEW</a>
   </section>
 
   <section class="workflow">
@@ -64,6 +83,7 @@
 
   <footer class="footer">
     <nav class="footer-nav">
+      <h3>CONTACT</h3>
       <a href="#">HOME</a>
       <a href="#">PROFILE</a>
       <a href="#">WORKS</a>
@@ -71,11 +91,11 @@
       <a href="#">CONTACT</a>
     </nav>
     <div class="social-icons">
-      <a href="#"><img src="icon_instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="icon_x.png" alt="X(Twitter)"></a>
+      <a href="#"><img src="images/Instagram rogo.svg" alt="Instagram"></a>
+      <a href="#"><img src="images/Xrogo.svg" alt="X(Twitter)"></a>
     </div>
     <div class="contact-button">
-      <a href="#contact">お問い合わせはこちら ✉</a>
+      <a href="#contact">お問い合わせはこちら</a>
     </div>
   </footer>
 </body>
