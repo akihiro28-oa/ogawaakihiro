@@ -4,18 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kokokan Design</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
-  <script>
-    (function(d) {
-      var config = {
-        kitId: 'uld2fcn',
-        scriptTimeout: 3000,
-        async: true
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>
+
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </head>
 <body>
   <header class="hero">
@@ -28,17 +25,13 @@
       <p>あなたの想いを形にして、広めるお手伝い</p>
     </div>
     </div>
-    <nav class="menu-icon">
-      <div></div>
-      <div></div>
-      <div></div>
-    </nav>
+    
   </header>
 
   <section class="intro">
      <span class="leftline naivey"></span>
      <span class="rightline naivey"></span>
-    <p>
+     <div><p>
       Kokokanとは「心」と「繋がる」を組み合わせたもの。<br>
       相手の気持ち、考え、想いという「心」の部分を、深掘りし、<br>
       大きく「繋げる」という意味を込めました。<br>
@@ -46,30 +39,35 @@
       少しでも遠くに、一人でも多くの方に届けるお手伝いをさせていただきます。<br>
       ぜひ、お気軽にご相談ください。
     </p>
-    <a href="#profile" class="profile-link">Profile VIEW →</a>
+    <a href="#profile" class="profile-link">Profile VIEW </a></div>
+    
   </section>
 
   <section class="works">
     <h2>WORKS</h2>
-     <span class="leftline1"></span>
-     <span class="rightline1"></span>
+     <span class="leftline"></span>
+     <span class="rightline"></span>
+
     <div class="work-gallery">
       <div class="work-item">
-        <img src="images/SVG/Banner01-80.jpg" alt="WORK 1">
+        <img src="images/Banner01-80.jpg" alt="WORK 1">
       </div>
       <div class="work-item">
         <img src="images/cafePC.png" alt="WORK 2">
-        <p>01 Banner<br><span>スマホプラン宣伝バナー（架空）</span></p>
       </div>
       <div class="work-item">
         <img src="images/biyouinnPC.png" alt="WORK 3">
       </div>
+    
     </div>
+
     <a href="#allworks" class="all-view">ALL VIEW</a>
   </section>
 
   <section class="workflow">
     <h2>WORKFLOW</h2>
+    <span class="leftline"></span>
+     <span class="rightline"></span>
     <p>お客様の受注から、完成納品に至る最後までお付き合いいたします。</p>
     <div class="workflow-steps">
       <div>ヒアリング</div>
@@ -82,8 +80,11 @@
   </section>
 
   <footer class="footer">
+    <h3>CONTACT</h3>
+     <span class="leftline naivey"></span>
+     <span class="rightline naivey"></span>
+
     <nav class="footer-nav">
-      <h3>CONTACT</h3>
       <a href="#">HOME</a>
       <a href="#">PROFILE</a>
       <a href="#">WORKS</a>
@@ -96,7 +97,16 @@
     </div>
     <div class="contact-button">
       <a href="#contact">お問い合わせはこちら</a>
+      <img src="images/footeryajirushi.svg" alt="alt contact-button">
     </div>
   </footer>
+
+  <script>
+    $('.work-gallery').slick();
+
+
+  </script>
+
+
 </body>
 </html>

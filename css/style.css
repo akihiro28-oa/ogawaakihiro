@@ -9,8 +9,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: 100%;
 }
-.logo{width: 382px;
+.logo{width: 30%;
+    max-width: 382px;
 }
 
 .hero-inner p{
@@ -29,21 +31,28 @@
 }
 .leftline{
     top: 0;
-    left: 100px;
+    left: 7%;
+
 }
 .rightline{
     top: 0;
-    right: 100px;
+    right: 7%;
 }
 
 .intro{position: relative;}
 .leftline.naivey, .rightline.naivey{
     background-color: #1b1464;
 }
+.intro > div{
+    padding: 50px 10%;
+    display: flex;
+    justify-content: space-between;
+
+}
 
 .intro p{
     font-size: 28px;
-    margin-top: 50px;
+   width: 67%;
     
 }
 
@@ -56,15 +65,14 @@
     background-color: #97cdf3;
     color: #fff;
     height: 725px;
+    position: relative;
 }
 
-.leftline1, .rightline1{
-    width: 2px;
-    height: 100%;
-    background-color: #fff;
-    display: block;
-    position: absolute;
+.works h2{
+    padding: 50px 10%;
 }
+
+
 .leftline1{
     top: 0;
     left: 100px;
@@ -72,6 +80,10 @@
 .rightline1{
     top: 0;
     right: 100px;
+}
+
+.workflow{
+    padding: 50px 10%;
 }
 
 .workflow h2 {
@@ -87,7 +99,16 @@
 .workflow-steps{
     font-size: 35px;
     writing-mode: vertical-lr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    text-align: center;
+    position: relative;
+    left: 12%;
+    right: 12%;
 }
+
 
 /*fooerの箇所*/
 .footer{
@@ -99,6 +120,7 @@
 .footer h3{
     color: #fff;
     font-size: 55px;
+    text-align: center;
     
 }
 
@@ -106,11 +128,28 @@
     max-width: 1060px;
     margin: 25px auto;
     padding:0 25px;
-    box-sizing: border-box;
     display: flex;
+    justify-content: center;
+}
+
+.footer-nav a{
+    display: block ;
+    font-size: 28px;
+    font-weight: lighter;
+    padding:0 3% 0 0;
+
+}
+
+.social-icons img{
+    height: 53px;
+    width: 53px;
 }
 
 .social-icons{
-    height: 53px;
-    width: 53px;
+    display: flex;
+}
+
+.contact-button a{
+    font-size: 26px;
+
 }
