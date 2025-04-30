@@ -39,6 +39,45 @@
     right: 7%;
 }
 
+/*ハンバーガーメニューPC*/
+
+
+
+.menu_btn{
+    height: 40px;
+    width: 40px;
+    border: 1px solid #1b1464;
+    border-radius:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_btn span{
+    height: 2px;
+    width: 28px;
+    border-radius: 3px;
+    display: block;
+    position: relative;
+}
+
+.menu_btn span::before,.menu_btn span::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 28px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.menu_btn span::before{
+    bottom: 8px;
+}
+
+.menu_btn span::after{
+    top: 8px;
+}
+
 .PC_nav ul{
     display: flex;
     justify-content: space-between;
@@ -56,6 +95,8 @@
 .PC_nav ul li+li{
     margin-left: 55px;
 }
+
+
 
 .intro{position: relative;}
 .leftline.naivey, .rightline.naivey{
@@ -90,18 +131,37 @@
     padding: 50px 10%;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  color: #000 !important;
+}
 
-.leftline1{
-    top: 0;
-    left: 100px;
+.work-gallery{
+    width: 75%;
+
 }
-.rightline1{
-    top: 0;
-    right: 100px;
+
+.work-item img {
+    width: 283px;
+    height: 212px;
+    justify-items: center;
 }
+
+.work-item {
+  display: flex;  
+  font-size: 2rem;
+  margin: 10px;
+  text-align: center;
+  background-color: #e0e0e0;
+  width: 23%;
+  height: 19%
+}
+
+
 
 .workflow{
     padding: 50px 10%;
+    position: relative;
 }
 
 .workflow h2 {
@@ -127,12 +187,65 @@
     right: 12%;
 }
 
+.flow_design10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .flow10 {
+    padding-left: 0;
+  }
+  
+  .flow10 > li {
+    list-style-type: none;
+    border: 2px solid #97cdf3;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .flow10 > li:not(:last-child) {
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .flow10 > li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    border: 20px solid transparent;
+    width: 0;
+    height: 0;
+    bottom: -53px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    border-top-color: #7fd9ce;
+  }
+  
+  .flow10 > li dl dt {
+    font-size: 30px;
+    font-weight: bold;
+
+  }
+  
+  .flow10 > li .icon10 {
+    color: #97cdf3;
+    margin-right: 0.5em;
+  }
+  
+  .flow10 > li dl dd {
+    margin: 0;
+  }
+
 
 /*fooerの箇所*/
 .footer{
     color: #fff;
     background-color: #97cdf3;
     height: 305px;
+    position: relative;
 }
 
 .footer h3{
@@ -158,6 +271,11 @@
 
 }
 
+.footer_botan{
+    display: flex;
+    justify-content: space-between;
+}
+
 .social-icons img{
     height: 53px;
     width: 53px;
@@ -165,6 +283,11 @@
 
 .social-icons{
     display: flex;
+}
+
+.contact-button img{
+    width: 392px;
+    display: block;
 }
 
 .contact-button a{

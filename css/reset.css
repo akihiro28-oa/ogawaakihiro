@@ -35,3 +35,7 @@ a {
   color: inherit;
   transition: 0.5s;
 }
+
+li{
+  list-style: none;
+}
