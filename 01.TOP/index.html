@@ -26,16 +26,21 @@
     </div>
     </div>
 
+    <div class="menu_btn"><span></span></div>
     <div class="PC_nav">
-      <ul>
+      <div>
+        <span class="leftline"></span>
+        <span class="rightline"></span>
+        <ul>
         <li><a href="#HOME">HOME</a></li>
         <li><a href="#PROFILE">PROFILE</a></li>
         <li><a href="#WORKS">WORKS</a></li>
         <li><a href="#WORKFLOWS">WORKFLOWS</a></li>
         <li><a href="#CONTACT">CONTACT</a></li>
       </ul>
-      <input type="checkbox" id="menu-btn-check">
-      <label for="menu-btn-check" class="menu-btn"><span></span></label>
+     </div>
+     
+     
       
       </div>
       
@@ -58,7 +63,10 @@
       少しでも遠くに、一人でも多くの方に届けるお手伝いをさせていただきます。<br>
       ぜひ、お気軽にご相談ください。
     </p>
-    <a href="#profile" class="profile-link">Profile VIEW </a>
+    <a href="#profile" class="profile-link">
+      Profile VIEW
+      <img src="./images/yajirushi1.svg">
+     </a>
      </div>
     
   </section>
@@ -87,7 +95,31 @@
     
     </div>
 
-    <a href="#allworks" class="all-view">ALL VIEW</a>
+    <div class="works-text">
+      <div class="text-item1">
+       <p>01 Banner Design</p>
+      </div>      
+      <div class="text-item2">
+        <p>02 LP Coding</p>
+       </div>      
+       <div class="text-item3">
+        <p>03 LP Design</p>
+       </div>      
+       <div class="text-item4">
+        <p>04 Banner Design</p>
+       </div>      
+       <div class="text-item5">
+        <p>05 SNS Design</p>
+       </div>      
+       
+    </div>
+
+    <a href="#allworks" class="all-view">
+      ALL VIEW
+      <img src="./images/Worksyajirushi.svg">
+    </a>
+
+
   </section>
 
   <section class="workflow">
@@ -97,10 +129,15 @@
     <p>お客様の受注から、完成納品に至る最後までお付き合いいたします。</p>
     <div class="workflow-steps">
       <div>ヒアリング</div>
+      <span></span>
       <div>原案作成、提案</div>
+      <span></span>
       <div>デザイン作成</div>
+      <span></span>
       <div>デザイン案提出、確認</div>
+      <span></span>
       <div>確認、修正</div>
+      <span></span>
       <div>納品</div>
     </div>
 
@@ -171,18 +208,42 @@
     <div class="contact-button">
       <a href="#contact">お問い合わせはこちら</a>
       <img src="images/footeryajirushi.svg" alt="alt contact-button">
+      <a href="b"><img src="images/Mailrogo.svg" alt="Mail"class="mail"style=
+        "width: 45px;margin-left: auto;/* padding-left: 10%; */display: flex;"
+    ></a>
     </div>
   </div>
   </footer>
 
   <script>
+  $(function () {  
+
     $('.work-gallery').slick({
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 1
   });
+
+   function showText(index){
+    $('.works-text div') .hide()
+    let textClass = '.text-item' + (index + 1)
+
+    $(textClass).fadeIn()
+   }
+   showText(0)
+
+   $('.work-gallery').on('afterChange',function(event,slick,curremSlide){
+    showText(curremSlide)
+   })
+
+
+   $('.menu_btn').on('click', function(){
+    $('.PC_nav').fadeToggle()
+   })
+
+  })
 
 
   </script>

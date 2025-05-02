@@ -44,44 +44,69 @@
 
 
 .menu_btn{
-    height: 40px;
-    width: 40px;
-    border: 1px solid #1b1464;
-    border-radius:5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 60px;
+    width: 64px;
+    position: absolute;
+    right: 10%;
+    top: 37px;
+    z-index: 1000;
 }
 
 .menu_btn span{
     height: 2px;
-    width: 28px;
+    width: 64px;
     border-radius: 3px;
     display: block;
     position: relative;
+    background-color: #1b1464;
 }
 
 .menu_btn span::before,.menu_btn span::after{
     content: "";
     display: block;
     height: 2px;
-    width: 28px;
+    width: 64px;
     border-radius: 3px;
-    position: relative;
+    position: absolute;
+    background-color: #1b1464;
 }
 
 .menu_btn span::before{
-    bottom: 8px;
+    bottom: 27px;
 }
 
 .menu_btn span::after{
-    top: 8px;
+    top: 27px;
+}
+
+.PC_nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #97cdf3;
+    
+    z-index: 100;
+    display: none;
+}
+
+.PC_nav > div{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
 
 .PC_nav ul{
     display: flex;
     justify-content: space-between;
-    background-color: #97cdf3;
+    width: 70%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    
+    
 }
 
 .PC_nav ul li{
@@ -89,12 +114,12 @@
     font-size: 60px;
     font-weight: bold;
     color: #fff;
+    width: 50%;
+    margin: 20px 0;
     
 }
 
-.PC_nav ul li+li{
-    margin-left: 55px;
-}
+
 
 
 
@@ -106,6 +131,7 @@
     padding: 50px 10%;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 
 }
 
@@ -115,6 +141,15 @@
     
 }
 
+
+.profile-link{
+    font-size: 25px;
+    color: #1b1464;
+    width: 264px;
+}
+
+
+
 .works h2{
     color: #fff;
     font-size: 55px;
@@ -123,8 +158,8 @@
 .works {
     background-color: #97cdf3;
     color: #fff;
-    height: 725px;
     position: relative;
+    padding-bottom: 5%;
 }
 
 .works h2{
@@ -138,23 +173,51 @@
 
 .work-gallery{
     width: 75%;
+    margin: 0 auto;
 
 }
 
 .work-item img {
-    width: 283px;
-    height: 212px;
     justify-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
+
+.works-text p{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.works-text {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
 
 .work-item {
   display: flex;  
   font-size: 2rem;
   margin: 10px;
   text-align: center;
-  background-color: #e0e0e0;
-  width: 23%;
-  height: 19%
+  background-color: #f5f5f5;
+  aspect-ratio: 283 / 212;
+}
+
+.all-view{
+    width: 264px;
+    display: block;
+    margin-left: auto;
+   
+    font-size: 25px;
+    color: #fff;
+    width: 264px;
+    padding-right: 10%;
+    padding-top:3%;
+  
 }
 
 
@@ -170,7 +233,7 @@
 }
 
 .workflow p{
-    font-size: 35px;
+    font-size: 33px;
     font-weight: lighter;
 }
 
@@ -180,18 +243,45 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 70%;
     text-align: center;
-    position: relative;
+    margin: 0 auto;
+    align-items: center;
+    padding-top: 5%;
+    /*position: relative;
     left: 12%;
-    right: 12%;
+    right: 12%;*/
 }
+
+.workflow-steps div{
+  border: 2px solid #97cdf3;
+  padding: 20px;
+  border-radius: 5px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.workflow-steps span{
+    border: 20px solid transparent;
+    width: 0;
+    height: 0;
+    bottom: -53px;
+    left: 50%;
+    transform: rotate(-90deg) translatey(10px);
+    border-top-color: #7fd9ce;
+
+}
+
+
+
+/*SP版WORKFLOW*/
 
 .flow_design10 {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    display: none;
+    
   }
   
   .flow10 {
@@ -244,14 +334,15 @@
 .footer{
     color: #fff;
     background-color: #97cdf3;
-    height: 305px;
     position: relative;
+    padding: 20px 40px;
 }
 
 .footer h3{
     color: #fff;
     font-size: 55px;
     text-align: center;
+    
     
 }
 
@@ -274,6 +365,9 @@
 .footer_botan{
     display: flex;
     justify-content: space-between;
+    padding: 0 10%;
+    padding-top: 45px;
+    padding-bottom: 50px;
 }
 
 .social-icons img{
@@ -292,5 +386,14 @@
 
 .contact-button a{
     font-size: 26px;
-
 }
+
+
+
+@media screen and (max-width: 767px)
+ {
+ .flow_design10{
+    display: flex;
+ }
+ }
+    
