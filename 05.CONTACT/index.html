@@ -27,32 +27,33 @@
     <div class="container">
         <h1>CONTACT</h1>
 
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfDV2fxUoHkaa9OdO26RMVfwBLiJL5uG2fgs6E4_-VOb3bFzA/viewform?usp=dialog"></form>
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfDV2fxUoHkaa9OdO26RMVfwBLiJL5uG2fgs6E4_-VOb3bFzA/formResponse" method="post" target="hidden_iframe"
+        onsubmit="submitted=true;">
         
-        <form>
+    
             <div class="form-group">
                 <label for="name">氏名</label>
-                <input type="text" id="name" name="entry.2116052852">
+                <input type="text" id="name" name="entry.2116052852" required>
             </div>
             
             <div class="form-group">
                 <label for="furigana">フリガナ</label>
-                <input type="text" id="furigana" name="entry.1516142494">
+                <input type="text" id="furigana" name="entry.1516142494" required>
             </div>
             
             <div class="form-group">
                 <label for="email">メールアドレス</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="entry.2026147470" required>
             </div>
             
             <div class="form-group">
                 <label for="phone">電話番号</label>
-                <input type="tel" id="phone" name="entry.1256147325">
+                <input type="tel" id="phone" name="entry.1256147325" required>
             </div>
             
             <div class="form-group">
                 <label for="message">お問い合わせ</label>
-                <textarea id="message" name="entry.2058381089" rows="10"></textarea>
+                <textarea id="message" name="entry.1618498056" rows="10" required></textarea>
             </div>
             
             <div class="submit-container">
@@ -61,5 +62,15 @@
         </form>
     
     </div>
+
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe
+        name="hidden_iframe"
+        id="hidden_iframe"
+        style="display: none"
+        onload="if(submitted){window.location='./thanks.html';}"
+    ></iframe>
 </body>
 </html>

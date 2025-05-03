@@ -23,6 +23,7 @@
      justify-content: center;
      align-items: center;
      padding: 8%;
+     position: relative;
   }
   
   header h1 {
@@ -111,6 +112,7 @@
 }
   
 /*PROFILE*/
+main{position: relative;}
   
   .profile-section {
     display: flex;
