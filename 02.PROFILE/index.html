@@ -16,19 +16,32 @@
 </head>
 
 <body>
-  <div class="container">
-    <aside class="side-line"></aside>
     <header>
+    <span class="leftline naivey"></span>
+     <span class="rightline naivey"></span>
       <h1>Profile</h1>
-      <div class="menu-icon">
-        <div></div><div></div><div></div>
-      </div>
+    
     </header>
+
+    <div class="menu_btn"><span></span></div>
+    <div class="PC_nav">
+      <div>
+        <span class="leftline"></span>
+        <span class="rightline"></span>
+        <ul>
+        <li><a href="#HOME">HOME</a></li>
+        <li><a href="#PROFILE">PROFILE</a></li>
+        <li><a href="#WORKS">WORKS</a></li>
+        <li><a href="#WORKFLOWS">WORKFLOWS</a></li>
+        <li><a href="#CONTACT">CONTACT</a></li>
+      </ul>
+     </div>
+    </div> 
 
     <main>
       <section class="profile-section">
         <div class="profile-image">
-          <img src="img/profile.jpg" alt="プロフィール画像">
+          <img src="images_profile/Profile gazou-80.jpg" alt="プロフィール画像">
         </div>
         <div class="profile-text">
           <h2>小川 晃寛</h2>
@@ -44,7 +57,7 @@
         <h2>Skills</h2>
 
         <div class="skill-block">
-          <img src="img/design.jpg" alt="デザインスキル">
+          <img src="images_profile/Skills design-80.jpg" alt="デザインスキル">
           <div>
             <h3>Design</h3>
             <p>ターゲットを明確にし、ニーズや行動心理を理解することを第一にしています。そのためヒアリングをしっかりと行い、修正を繰り返しさせていただきます。</p>
@@ -54,7 +67,7 @@
         </div>
 
         <div class="skill-block">
-          <img src="img/coding.jpg" alt="コーディングスキル">
+          <img src="images_profile/Skills cording-80.jpg" alt="コーディングスキル">
           <div>
             <h3>Coding</h3>
             <p>なるべく複雑なコードは避け、綺麗で見やすいコードを書くことを心がけています。またWEBサイトに動きをつけることも可能です。</p>
@@ -66,8 +79,11 @@
     </main>
 
     <footer>
-      <div class="footer-container">
+      <div class="footer">
         <h2>CONTACT</h2>
+        <span class="leftline"></span>
+        <span class="rightline"></span>
+
         <nav class="footer-nav">
           <a href="#">HOME</a>
           <a href="#">PROFILE</a>
@@ -75,13 +91,33 @@
           <a href="#">WORKFLOW</a>
           <a href="#">CONTACT</a>
         </nav>
-        <div class="social-icons">
-          <a href="#"><img src="img/insta.svg" alt="Instagram"></a>
-          <a href="#"><img src="img/x.svg" alt="X(Twitter)"></a>
+        <div class="footer_botan">
+          <div class="social-icons">
+            <a href="#"><img src="images_profile/Instagram logo.svg" alt="Instagram"></a>
+            <a href="#"><img src="images_profile/X logo.svg" alt="X(Twitter)"></a>
+          </div>
+          <div class="contact-button">
+            <a href="#contact">お問い合わせはこちら</a>
+            <img src="images_profile/footer yajirushi.svg" alt="alt contact-button">
+            <a href="b"><img src="images_profile/Mail logo.svg" alt="Mail"class="mail"style=
+              "width: 45px;margin-left: auto;/* padding-left: 10%; */display: flex;"
+          ></a>
+          </div>
         </div>
-        <a class="contact-btn" href="#">お問い合わせはこちら <span>✉️</span></a>
-      </div>
     </footer>
-  </div>
+
+
+
+  <script>
+    $(function () {
+      $('.menu_btn').on('click', function(){
+    $('.PC_nav').fadeToggle()
+   })  
+    }) 
+
+
+  </script>
+    
+  
 </body>
 </html>
