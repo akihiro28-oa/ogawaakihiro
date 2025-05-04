@@ -26,7 +26,9 @@
     </div>
     </div>
 
-    <div class="menu_btn"><span></span></div>
+    <div class="menu_btn">
+      <span></span>
+     </div>
     <div class="PC_nav">
       <div>
         <span class="leftline"></span>
@@ -39,6 +41,10 @@
         <li><a href="#CONTACT">CONTACT</a></li>
       </ul>
      </div>
+
+     
+
+
      
      
       
@@ -242,6 +248,14 @@
 
    $('.menu_btn').on('click', function(){
     $('.PC_nav').fadeToggle()
+    if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $(".PC_nav").removeClass("open").fadeOut(100);
+      } else {
+        $(this).addClass("active");
+        $("#PC_nav").fadeIn(100).addClass("open");
+      }
+    
    })
 
   })
