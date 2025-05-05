@@ -82,21 +82,18 @@
 /*バツ印*/
 
 .menu_btn.active span {
-    -webkit-transform: translateY(8px) rotate(-45deg);
-    transform: translateY(8px) rotate(-45deg);
-    background-color: #1b1464;
+    background-color: transparent;
   }
   
 .menu_btn.active span:before {
-    -webkit-transform: translateY(-8px) rotate(45deg);/*打ち消す*/
-    transform: translateY(-8px) rotate(45deg);/*打ち消す*/
-    opacity: 0;
-  }
+    bottom: 0;
+    transform: rotate(45deg);
+}
   
 .menu_btn.active span:after {
-    -webkit-transform: translateY(-16px) rotate(45deg);
-    transform: translateY(-16px) rotate(90deg);
     background-color: #1b1464;
+    top: 0;
+    transform: rotate(135deg);
   }
 
 

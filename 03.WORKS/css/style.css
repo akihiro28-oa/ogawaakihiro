@@ -1,5 +1,104 @@
 @charset "utf-8";
 
+/*ハンバーガーメニューPC*/
+
+
+
+.menu_btn{
+  height: 60px;
+  width: 64px;
+  position: absolute;
+  right: 10%;
+  top: 37px;
+  z-index: 1000;
+}
+
+.menu_btn span{
+  height: 2px;
+  width: 64px;
+  border-radius: 3px;
+  display: block;
+  position: relative;
+  background-color: #1b1464;
+}
+
+.menu_btn span::before,.menu_btn span::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 64px;
+  border-radius: 3px;
+  position: absolute;
+  background-color: #1b1464;
+}
+
+.menu_btn span::before{
+  bottom: 27px;
+}
+
+.menu_btn span::after{
+  top: 27px;
+}
+
+/*バツ印*/
+
+.menu_btn.active span {
+  background-color: transparent;
+}
+
+.menu_btn.active span:before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+.menu_btn.active span:after {
+  background-color: #1b1464;
+  top: 0;
+  transform: rotate(135deg);
+}
+
+
+
+.PC_nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #97cdf3;
+  
+  z-index: 100;
+  display: none;
+}
+
+.PC_nav > div{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.PC_nav ul{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  
+  
+}
+
+.PC_nav ul li{
+  min-width: 105px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
+  width: 50%;
+  margin: 20px 0;
+  
+}
+
 body {
     font-family: 'Helvetica Neue', sans-serif;
     color: #fff;
@@ -92,3 +191,64 @@ body {
     color: #ccc;
   }
   
+  /*fooerの箇所*/
+.footer{
+  color: #fff;
+  background-color: #97cdf3;
+  position: relative;
+  padding: 20px 40px;
+}
+
+.footer h3{
+  color: #fff;
+  font-size: 55px;
+  text-align: center;
+  
+  
+}
+
+.footer-nav{
+  
+  margin: 25px auto;
+  padding:0 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-nav a{
+  display: block ;
+  font-size: 28px;
+  font-weight: lighter;
+  
+
+}
+
+.footer_botan{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+  padding-top: 45px;
+  padding-bottom: 50px;
+}
+
+.social-icons img{
+  height: 53px;
+  width: 53px;
+}
+
+.social-icons{
+  display: flex;
+  gap: 50px;
+}
+
+.contact-button img{
+  width: 392px;
+  display: block;
+}
+
+.contact-button a{
+  font-size: 26px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
