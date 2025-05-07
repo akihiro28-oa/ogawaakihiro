@@ -1,7 +1,138 @@
 @charset "utf-8";
-* {
-    box-sizing: border-box;
-  }
+
+.leftline.naivey, .rightline.naivey {
+  width: 2px;
+  height: 150%;
+  background-color: #1b1464;
+  display: block;
+  position: absolute;
+}
+.leftline{
+  top: 0;
+  left: 7%;
+
+}
+.rightline{
+  top: 0;
+  right: 7%;
+}
+
+
+/*ハンバーガーメニューPC*/
+
+.leftline, .rightline{
+  width: 2px;
+  height: 100%;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+}
+.leftline{
+  top: 0;
+  left: 7%;
+
+}
+.rightline{
+  top: 0;
+  right: 7%;
+}
+
+
+
+.menu_btn{
+  height: 60px;
+  width: 64px;
+  position: absolute;
+  right: 10%;
+  top: 37px;
+  z-index: 1000;
+}
+
+.menu_btn span{
+  height: 2px;
+  width: 64px;
+  border-radius: 3px;
+  display: block;
+  position: relative;
+  background-color: #1b1464;
+}
+
+.menu_btn span::before,.menu_btn span::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 64px;
+  border-radius: 3px;
+  position: absolute;
+  background-color: #1b1464;
+}
+
+.menu_btn span::before{
+  bottom: 27px;
+}
+
+.menu_btn span::after{
+  top: 27px;
+}
+
+/*バツ印*/
+
+.menu_btn.active span {
+  background-color: transparent;
+}
+
+.menu_btn.active span:before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+.menu_btn.active span:after {
+  background-color: #1b1464;
+  top: 0;
+  transform: rotate(135deg);
+}
+
+
+
+.PC_nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #97cdf3;
+  
+  z-index: 100;
+  display: none;
+}
+
+.PC_nav > div{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.PC_nav ul{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  
+  
+}
+
+.PC_nav ul li{
+  min-width: 105px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
+  width: 50%;
+  margin: 20px 0;
+  
+}
   
   body {
     margin: 0;
@@ -13,11 +144,7 @@
   .container {
     max-width: 1366px;
     margin: 0 auto;
-    padding: 40px 20px;
-    border-left: 1px solid #2e2669;
-    border-right: 1px solid #2e2669;
-    min-height: 100vh;
-    position: relative;
+    padding-top:10%;
   }
   
   header h1 {
@@ -35,18 +162,18 @@
   }
   
   .work-info {
-    padding: 0 20px;
+    padding: 0 10%;
   }
   
   .category {
-    color: #7bb0f7;
+    color: #97cdf3;
     font-size: 18px;
     margin-bottom: 8px;
   }
   
   .title {
     font-size: 22px;
-    color: #66a3ff;
+    color: #97cdf3;
     margin: 0;
   }
   
@@ -59,17 +186,17 @@
     margin: 20px 0;
     font-size: 14px;
     line-height: 1.8;
-    color: #666;
+    color: #97cdf3;
   }
   
   .detail-block {
     font-size: 14px;
     color: #444;
   }
-  
+
   .detail-block .label {
     font-weight: bold;
-    color: #2e2669;
+    color: #1b1464;
     display: inline-block;
     width: 90px;
   }
@@ -78,18 +205,11 @@
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
-    padding: 0 20px;
+    padding: 0 10%;
     font-weight: bold;
+    color: #97cdf3;
   }
   
-  .nav-arrows a {
-    text-decoration: none;
-    color: #7bb0f7;
-    position: relative;
-    padding: 8px 16px;
-    border-bottom: 2px solid #7bb0f7;
-    transition: 0.3s;
-  }
   
   .nav-arrows a:hover {
     opacity: 0.8;
