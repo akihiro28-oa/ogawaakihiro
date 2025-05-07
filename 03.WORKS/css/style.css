@@ -1,5 +1,39 @@
 @charset "utf-8";
 
+.leftline.naivey, .rightline.naivey {
+  width: 2px;
+  height: 150%;
+  background-color: #1b1464;
+  display: block;
+  position: absolute;
+}
+.leftline{
+  top: 0;
+  left: 7%;
+
+}
+.rightline{
+  top: 0;
+  right: 7%;
+}
+
+.leftline, .rightline{
+  width: 2px;
+  height: 100%;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+}
+.leftline{
+  top: 0;
+  left: 7%;
+
+}
+.rightline{
+  top: 0;
+  right: 7%;
+}
+
 /*ハンバーガーメニューPC*/
 
 
@@ -106,17 +140,24 @@ body {
     padding: 0;
   }
   
-  .works-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
   .section-title {
     font-size: 36px;
     text-align: center;
-    color: #8e7de4;
+    color: #1b1464;
   }
+
+  .section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+    position: relative;
+ }
+ 
+ .section-title h2 {
+   font-size: 36px;
+   color: #1b1464;
+ }
   
   .description {
     text-align: center;
@@ -142,12 +183,15 @@ body {
   
   .works-category {
     margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
   }
+
   
   .works-category h3 {
     font-size: 24px;
-    color: #8e7de4;
-    border-bottom: 1px solid #8e7de4;
+    color: #1b1464;
+    border-bottom: 1px solid #1b1464;
     padding-bottom: 8px;
   }
   
@@ -166,12 +210,12 @@ body {
   .work-item img {
     max-width: 100%;
     height: auto;
-    border-radius: 6px;
-  }
+    border-radius: 6px
+    }
   
   .placeholder {
     background-color: #a2d4f6;
-    color: #2e2669;
+    color: #1b1464;
     display: flex;
     justify-content: center;
     align-items: center;

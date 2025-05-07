@@ -1,0 +1,51 @@
+@charset "utf-8";
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #97cdf3;
+    
+  }
+  
+  .thankyou-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: center;
+  }
+    
+  
+  h1 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 40px;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #1b1464;
+  }
+  
+  .home-link {
+    display: inline-block;
+    margin-top: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    position: relative;
+    padding-bottom: 4px;
+    border-bottom: 2px solid white;
+  }
+  
+  .home-link span {
+    margin-left: 10px;
+    font-size: 22px;
+  }
